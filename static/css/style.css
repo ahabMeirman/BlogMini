@@ -1,0 +1,314 @@
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+/* базовые стили по умалчанию для шрифтов*/
+body {
+	font-family: Circe Rounded;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1.2;
+	color: #010101;
+}
+
+/*.header{
+	position: fixed;/*фиксируем при прокрутке*/
+	/*top: 0;
+	left: 0;
+	width: 100px;*//*всегда занимает 100проц ширину*/
+/*}*/
+
+/* start menu navbar */
+.wrapper {
+	max-width: 1200px;/*страница будет ограничиваться по этой ширине*/
+	margin: 0 auto; /* выравнивание по центру*/
+	height: 80px;
+}
+
+.header_wrapper {
+	display: flex;
+	flex-wrap: wrap;/*перенос слова, чтобы не наезжали друг на друга*/
+	justify-content: flex-start;
+}
+
+.header_list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.header_item {
+	margin-right: 855px;
+}
+
+.header_item:last-child {
+	margin-right: 0px;
+}
+.header_item:first-child {
+	margin-left: 20px;
+}
+
+.header_link {
+	font-family: Circe Rounded;
+	font-size: 22px;
+	line-height: 26px;
+	color: #010101;
+	text-decoration: none;/*убираем нижнее подчеркивание*/
+}
+
+.header_link:hover, .header_link:focus, .header_link:active {
+	opacity: .75;
+}
+
+.header_button_add {
+	position: absolute;
+	width: 166px;
+	height: 32px;
+	right: 85px;
+
+	background: #315AF2;
+	border-radius: 6px;
+}
+
+.header_button_text {
+	font-family: Circe Rounded;
+	font-size: 16px;
+	line-height: 19px;
+
+	color: #FFFFFF;
+
+	/* Inside Auto Layout */
+
+	flex: none;
+	order: 0;
+	align-self: center;
+	margin: 10px 0px;
+}
+
+.header_line {
+	position: absolute;
+	width: 1440px;
+	height: 0px;
+	left: 0px;
+	top: 64px;
+
+	border: 2px solid #CDCDCD;
+}
+
+/* end menu navbar */
+
+.intro_info {
+	position: absolute;
+	width: 37px;
+	height: 20px;
+	left: 120px;
+	top: 191px;
+	font-family: Circe Rounded;
+	font-size: 16px;
+	line-height: 20px;
+	/* identical to box height, or 125% */
+
+	display: flex;
+	align-items: center;
+	letter-spacing: -0.416667px;
+
+	color: #E9399C;
+}
+
+.intro_title {
+	position: absolute;
+	width: 672px;
+	height: 112px;
+	left: 120px;
+	top: 221px;
+
+	font-family: Museo Cyrl;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 44px;
+	line-height: 128%;
+	/* or 56px */
+
+	display: flex;
+	align-items: center;
+	letter-spacing: -0.416667px;
+
+	color: #315AF2;
+}
+
+.intro_image {
+	position: absolute;
+	width: 464px;
+	height: 422px;
+	left: 796px;
+	top: 189px;
+}
+
+.intro_text {
+	position: absolute;
+	width: 391px;
+	height: 108px;
+	left: 120px;
+	top: 343px;
+
+	font-family: Circe Rounded;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 136%;
+	/* or 22px */
+
+	display: flex;
+	align-items: center;
+	letter-spacing: -0.416667px;
+
+	color: #000000;
+}
+
+.intro_button {
+	display: flex;
+	flex-direction: row;
+	padding: 10px 18px;
+
+	position: absolute;
+	width: 150px;
+	height: 58px;
+	left: 120px;
+	top: 471px;
+
+	background: #315AF2;
+	border-radius: 6px;
+}
+
+.intro_button_text {
+	position: static;
+	width: 114px;
+	height: 38px;
+	left: 18px;
+	top: 10px;
+
+	font-family: Museo Cyrl;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 38px;
+	display: flex;
+	align-items: center;
+	letter-spacing: -0.416667px;
+
+	color: #FFFFFF;
+
+
+	/* Inside Auto Layout */
+
+	flex: none;
+	order: 0;
+	align-self: center;
+	margin: 10px 0px;
+}
+
+.intro_line {
+	position: absolute;
+	width: 1440px;
+	height: 0px;
+	left: 0px;
+	top: 591px;
+
+	border: 2px solid #CDCDCD;
+}
+
+/* start blogs section */
+
+.posts {
+	position: absolute;
+	top: 600px;
+}
+
+.posts_title {
+	/*position: absolute;*/
+	width: 231px;
+	height: 38px;
+	left: 119px;
+	top: 651px;
+
+	font-family: Museo Cyrl;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 38px;
+	display: flex;
+	align-items: center;
+	letter-spacing: -0.416667px;
+
+	color: #315AF2;
+}
+
+.posts_border {
+	position: absolute;
+	width: 335px;
+	height: 300px;
+
+
+	background: #FFFFFF;
+	border: 2px solid #CDCDCD;
+	box-sizing: border-box;
+	border-radius: 3px;
+}
+
+.posts_image {
+	width: 217px;
+	height: 112px;
+}
+/* end blogs */
+
+/* start blog detail */
+
+.post {
+	position: absolute;
+	width: 607px;
+	height: 1481px;
+	left: 417px;
+	top: 231px;
+}
+
+.post_title {
+	position: static;
+	width: 400px;
+	height: 123px;
+	left: 0px;
+	top: 0px;
+
+	font-family: Museo Cyrl;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 128%;
+	/* or 41px */
+
+	letter-spacing: -0.416667px;
+
+	color: #315AF2;
+
+
+	/* Inside Auto Layout */
+
+	flex: none;
+	order: 0;
+	align-self: flex-start;
+	margin: 0px 20px;
+}
+
+.post_image {
+	border-radius: 12px;
+}
+
+.post_text {
+	position: static;
+	width: 540px;
+	height: 220px;
+}
+
+/* end blog detail */

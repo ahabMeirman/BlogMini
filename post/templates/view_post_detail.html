@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+	<style type="text/css">
+		body {
+			background: #E5E5E5;
+		}
+	</style>
+
+	<div class="container-fluid">
+		<div class="post">
+			<h1 class="post_title">{{blog.title}}</h1>
+			<div class="post_image_box">
+				<img src="{{blog.cover.url}}" class="post_image">
+			</div>
+			<p class="post.text">{{blog.text}}</p>
+		</div>
+	</div>
+{% endblock %}

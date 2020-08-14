@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+	<section class="intro">
+		<div class="wrapper">
+			<p class="intro_info">New</p>
+			<h1 class="intro_title">
+				{{ last_post.title }}
+			</h1>
+			<p class="intro_text">{{last_post.text}}</p>
+			<button class="intro_button">
+				<a href="{% url 'view_post_detail_url' title=last_post.title %}" class="intro_button_text">Читать</a>
+			</button>
+			<img src="{% static 'svg/1Statya_3.png' %}" class="intro_image">
+		</div>
+	</section>
+
+	<hr class="intro_line">
+		
+	<div class="posts">
+		<h1 class="posts_title">Другие статьи</h1>
+
+		<div class="card-deck">
+
+			{% for blog in blogs %}
+				<div class="card posts_border">
+					<p class="posts_date">{{blog.date}}</p>
+					<img src="{{blog.cover.url}}" class="posts_image">
+					<a href="{% url 'view_post_detail_url' title=blog.title %}" class="posts_text_link">{{blog.title}}</a>
+				</div>
+			{% endfor %}
+
+		</div>
+	</div>
+
+{% endblock %}

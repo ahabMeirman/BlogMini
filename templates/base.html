@@ -1,0 +1,68 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="{% static 'css/reset.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>
+      {% block title %}
+      {% endblock%}
+    </title>
+  </head>
+  <body>
+
+    
+      <div class="container-fluid">
+        <div class="header">
+          <div class="wrapper">
+            
+            <div class="header_wrapper">
+
+              <div class="header_logo">
+                <a href="#" class="header_logo-link">
+                  <img src="{% static 'svg/Logo_Kodland.png' %}" class="header_logo-pic" alt="Почему подросткам стоит изучать программирование?">
+                </a>
+              </div>
+
+              <nav class="header_nav">
+                <ul class="header_list">
+                  <li class="header_item">
+                    <a href="{% url 'post_view_url' %} " class="header_link">Блог</a>
+                  </li>
+                  <li>
+                    <button type="button" class="header_button_add">
+                      <a href="{% url 'post_create_url' %}" class="header_button_text">
+                        + Добавить статью
+                      </a>
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            
+            <hr class="header_line">
+            </div>
+
+          </div>
+        </div>
+   
+
+        {% block content %}
+        {% endblock %}
+      </div>
+      
+ 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
