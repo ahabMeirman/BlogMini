@@ -26,7 +26,7 @@ SECRET_KEY = 'g)^hwd=n9r-2&7t_j_11&5sbdvc!t=^l#&2es%nui%almu$l$w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['newahab.pythonanywhere.com']
 
 
 # Application definition
@@ -80,24 +80,23 @@ WSGI_APPLICATION = 'miniblog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'blog_mini',
-        'USER': 'postgres',
-        'PASSWORD': 'Ba170790',
-        'HOST': 'localhost',
-        'PORT': '7000',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'blog_mini',
+#         'USER': 'postgres',
+#         'PASSWORD': 'Ba170790',
+#         'HOST': 'newAhab.postgres.pythonanywhere-services.com',
+#         'PORT': 10667,
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

@@ -19,8 +19,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from django.views.generic.base import RedirectView # это глваный Url на который подстовляется домен
+
 
 urlpatterns = [
+    path('', RedirectView.as_view(url='/blog/')),
     path('admin/', admin.site.urls),
     path('blog/', include('post.urls')),
 ]
